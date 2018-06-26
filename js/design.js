@@ -12,7 +12,7 @@ function makeGrid(){
 		let row = document.createElement('TR');
 		canvas.appendChild(row);
 
-		for (let j = 0; j < rows; j++){
+		for (let j = 0; j < columns; j++){
 			let col = document.createElement('TD');
 			row.appendChild(col);
 		}
