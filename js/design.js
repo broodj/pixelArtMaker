@@ -5,7 +5,7 @@ let canvas = document.querySelector('#pixelCanvas');
 //add makeGrid();
 function makeGrid(){
 	let rows = document.querySelector('#inputHeight').value;
-	let columns = document.querySelector('inputWidth').value;
+	let columns = document.querySelector('#inputWidth').value;
 	canvas.innerHTML = "";
 
 	for (let i = 0; i < rows; i++){
