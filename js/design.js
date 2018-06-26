@@ -7,6 +7,7 @@ function makeGrid(){
 	let rows = document.querySelector('#inputHeight').value;
 	let columns = document.querySelector('#inputWidth').value;
 	canvas.innerHTML = "";
+	canvas.style.backgroundColor = "";
 
 	for (let i = 0; i < rows; i++){
 		let row = document.createElement('TR');
@@ -27,10 +28,8 @@ submit.addEventListener('click', function(event){
 
 canvas.addEventListener('mousedown', function(event){
 	let color = document.querySelector('#colorPicker').value;
-	event.target.style.backgroundColor = color;
+	event.target.style = 'background-color: ${color}';
 });
-
-
 
 
 
