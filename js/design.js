@@ -2,8 +2,6 @@
 let submit = document.querySelector('input[type="submit"]');
 let canvas = document.querySelector('#pixelCanvas');
 
-let color = document.querySelector('#colorPicker').value;
-
 //add makeGrid();
 function makeGrid(){
 	let rows = document.querySelector('#inputHeight').value;
@@ -21,11 +19,16 @@ function makeGrid(){
 	}
 }
 
-
 //add event listeners
+submit.addEventListener('click', function(event){
+	event.preventDefault();
+	makeGrid();
+});
 
-
-
+canvas.addEventListener('mousedown', function(event){
+	let color = document.querySelector('#colorPicker').value;
+	event.target.style.backgroundColor = color;
+});
 
 
 
