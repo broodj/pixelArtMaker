@@ -20,16 +20,21 @@ function makeGrid(){
 	}
 }
 
+function addColor(event){
+	let gridSquare = event.target;
+	let myColor = document.querySelector('#colorPicker').value;
+	if (event.target.nodeName == "TD"){
+		gridSquare.style.backgroundColor = myColor;
+	}
+}
+
 //add event listeners
 submit.addEventListener('click', function(event){
 	event.preventDefault();
 	makeGrid();
 });
 
-canvas.addEventListener('mousedown', function(event){
-	let color = document.querySelector('#colorPicker').value;
-	event.target.style = 'background-color: ${color}';
-});
+canvas.addEventListener('mousedown', addColor);
 
 
 
